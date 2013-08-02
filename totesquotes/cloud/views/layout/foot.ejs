@@ -1,0 +1,40 @@
+            <hr>
+
+            <footer>
+                <p>&copy; TotesQuotes 2013 | Built for <a href="http://www.developdenver.org">dvlpdnvr</a> by <a href="http://www.twitter.com/liquidlev">Randy Winch</a></p>
+            </footer>
+
+        </div> <!-- /container -->
+        <div id="fb-root"></div>
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+        <script src="//www.parsecdn.com/js/parse-1.2.8.min.js"></script>
+        <script src="/js/vendor/bootstrap.min.js"></script>
+        <script src="/js/main.js"></script>
+        <script type="text/javascript">
+            Parse.initialize("<%= parseAppKey %>", "<%= parseJSKey %>");
+
+            window.fbAsyncInit = function() {
+                Parse.FacebookUtils.init({
+                appId      : '<%= FBAppID %>', // Facebook App ID
+                channelUrl : '//<%= AppURL %>/channel.html', // Channel File
+                status     : true, // check login status
+                cookie     : true, // enable cookies to allow Parse to access the session
+                xfbml      : true  // parse XFBML
+                });
+
+                // Additional initialization code here
+                TotesQuotes.init();
+            };
+
+            (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=<%= FBAppID %>";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+
+    </body>
+</html>

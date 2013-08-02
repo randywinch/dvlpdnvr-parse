@@ -1,0 +1,18 @@
+<% include ../layout/head.ejs %>
+
+		<div class="jumbotron">
+		    <h1>Welcome!</h1>
+		    <p>Are you ready to impress your friends with your intimate knowledge of obscure movie quotes? Click the movie images below to learn more about these amazing pieces of cinema!</p>
+		</div>
+
+		<!-- Example row of columns -->
+		<div class="row">
+		  	<% movies.forEach(function(movie) { %>
+		  		<div class="span3 post_link">
+			  		<h5><a href="<%= '/movies/' + movie.id %>"><%= movie.get("title") %></a></h5>
+			  		<p><a href="<%= '/movies/' + movie.id %>"><img src="<%= movie.get("image") %>" alt="<%= movie.get("title") %>" class="img-rounded img-responsive" /></a></p>
+		  		</div>
+		    <% }) %>
+		</div>
+
+<% include ../layout/foot.ejs %>

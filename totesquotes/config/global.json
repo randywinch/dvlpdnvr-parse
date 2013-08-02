@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "_default": {
+            "link": "totesquotes"
+        }, 
+        "totesquotes": {
+            "applicationId": "APP_ID", 
+            "masterKey": "MASTER_KEY"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.8"
+    }
+}

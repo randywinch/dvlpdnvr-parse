@@ -1,0 +1,12 @@
+{
+  "name": "ripquotes",
+  "version": "0.0.1",
+  "description": "Ripping Quotes and Movie Info from IMDB",
+  "main": "ripquotes.js",
+  "author": "",
+  "license": "BSD",
+  "dependencies": {
+    "jsdom": "~0.8.2",
+    "parse": "~1.2.8"
+  }
+}

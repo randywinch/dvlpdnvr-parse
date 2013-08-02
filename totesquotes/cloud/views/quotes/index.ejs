@@ -1,0 +1,14 @@
+<% include ../layout/head.ejs %>
+
+		<!-- Main hero unit for a primary marketing message or call to action -->
+		<h1>Quotes!</h1>
+
+	  	<% quotes.forEach(function(quote) { %>
+	  		<div class="well">
+	  			<h5><a href="/movies/<%= quote.get('parent').id %>"><%= quote.get('parent').get('title') %></a></h5>
+	  			<%- quote.get('text') %>
+	  		</div>
+	    <% }) %>
+
+
+<% include ../layout/foot.ejs %>
